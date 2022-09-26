@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.hero_section {
+  /* width: 100%;  */
+  height: 740px;
+  /* background-image: url("../img/hero-image-min.png"); */
+  /*
+  It is very good to optimize your image before uploading them in the browser else it will be so heavy and end up loading slowly when people visit your site plus it will consume the users data.
+  We will be using OPTIMIZILLA to optimize all our images. there are a lot of other softwares that can optimize images. 
+   */
+
+   /*
+   To further reduce the image, we use cloudinary. 
+    */
+
+    background-image: url("https://res.cloudinary.com/dxindsskt/image/upload/q_5/v1663527914/hero%20image/hero-image-min_ziqizj.png");
+
+    /*
+
+     background-image: linear-gradient(rgb(200, 255, 0), rgba(0, 0, 255, 0.26)), url("https://res.cloudinary.com/dxindsskt/image/upload/q_5/v1663527914/hero%20image/hero-image-min_ziqizj.png");
+
+    If you want to apply linear-gradient, do the above.
+    
+    Please note that you have the make the linear gradient transparent in order for the image to be visible.
+     */
+  /*
+  My background-image expanded that I have to scroll but it is not the same with my facilitor's work. 
+   */
+  /* background: linear-gradient(white black); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 0 20px;
+}
+
+.mobile_btn{
+  display: none;   
+}
+
+.nav_list {
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+/*
+My list spread across his head but the design started from the hair strand hence I gave it a gap of 20px.
+ */
+
+  /* list-style: none; */
+
+  /*
+  I noticed that if I put the list-style or set display as inline (which will remove the bullets from the list) in the ul itself, it will still work. why? The reason for this question is because Mr. Innocent set his display on the nav-list-items itself...although this worked as well. so which place exactly is the right place to put it?
+   */
+  /* gap: 83.6px; */
+  padding-top: 26px;
+  padding-bottom: 26px;
+  /* although the padding-bottom will not be visible now because of the background color but if we give it a visible background color, you will see it clearly. The esssence of the padding bottom is so the the users don't struggle when they are clicking on the navigation list. they will have enough space when they are navigating. These are some of the tricks we need to learn on our journey because, although the designer did not include it, we have to take initiative.  */
+  padding-right: 92px;
+}
+
+.nav_list_items {
+  font-family: "lato";
+  display: inline;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+  /* color: #404040; */
+}
+
+.links{
+  text-decoration: none;
+  color: #A6A6A6;
+
+  /*
+  We can choose color to be current color or inherit. This will take on the color of the parent div or container. 
+   */
+}
+
+.inner_container{
+  /* background-color: red; */
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1240px;
+  /*
+  why did we use 100% width and still did max-width? why not just go straight and use the max-width? Although he said it is because of responsiveness but I'm wondering how we can have two widths in a container. 
+   */
+}
+
+.profile{
+  /*
+  In the design, we have that the magin-top of this profile wrapper  from the top of the screen is 181px but remember that the class of nav_list is already occupying 52px from the top (from the padding top and bottom of 26px each) so we can't just assign 181 straight to this profile rather, we will subtract the nav_list height(52px) from the total height (181px). this will give us 129px. so the margin-top of this to the nav_list is 129px. By the time we add 129px to the 52px of the nav_list, we will have 181px. 
+  The reason is because if we say margin-top 181px straight, the margin-top will count from the nav bar. So we have to put the height of the nav bar into consideration as well.
+   */
+
+   margin-top: 129px;
+   width: 100%;
+   max-width: 467px;
+   height: 360px;
+   /* background-color: red; */
+}
+.name{
+  font-family: "lato";
+  font-weight: 700;
+  line-height: 58px;
+  font-size: 48px;
+  margin-bottom: 24px;
+}
+
+.description{
+  /* margin-top: 24px; */
+  font-family: "lato";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 32px;
+  color: #A6A6A6;
+  ;
+  
+}
+
+.btn{
+  padding: 26px 62px;
+  /* padding-bottom: 26px;
+  padding-left: 62px;
+  padding-right: 62px; */
+  font-family: "lato";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  background-color: transparent;
+}
+
+.icon_list{
+  position: absolute;
+  right: 100px;
+  /* bottom: 1.59px; */
+}
+
+.icon_listitems{
+  display: flex;
+  /* list-style: none;
+  This still works though
+   */
+}
+
+.icon_listitems + .icon_listitems{
+  flex-direction: column;
+  /* gap: 29.5px;
+  This can also work but we are going to use the siblings selector here.
+  
+  A siblings selector works such that the first or last item on the list will not have an unsed margin space. Once you assign a sibling selector,you are saying that any sibling directly nest to me should have the properties assigned. This means that all the siblings with that same class name will also be affected.
+  */
+
+  margin-top: 29.5px;
+
+}
+
+
+
+/*
+Here we want to start working on the mobile view. All the styles we will be applying here will start working when our screen is at 768px downwards. 
+ */
+ @media (max-width:768px){
+
+  /*
+  Going back to our design, when we check our design, you will see that the mobile view does not have the nav bar displayed across the screen so we will start from there and display the nav_list to none. 
+   */
+
+
+  .hero_section {
+    background-image: url(../img/hero\ image.png);
+    padding: 0 20px;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-position: center;
+    /* width: 100%; */
+  }
+   .nav_list{
+    display: none;
+   }
+
+   .icon_list{
+    display: none;
+   }
+
+
+    /* .inner_container{
+    position: relative;
+   } */
+
+   .profile{
+    /* position: absolute;
+    bottom: 40px; */
+    /* max-width: 284px; */
+    margin: 0;
+    padding-top: 482px;
+   }
+
+   .description{
+    font-size: 12px;
+    line-height: 18px;
+  } 
+
+  .inner_container{
+    /* height: 850px; */
+  }
+
+  .name{
+    font-family: "lato";
+    font-weight: 700;
+    line-height: 29px;
+    font-size: 24px;
+  }
+
+  .btn{
+    padding: 19px 56px;
+    /* padding-bottom: 26px;
+    padding-left: 62px;
+    padding-right: 62px; */
+    font-family: "lato";
+    font-weight: 400;
+    font-size: 18px;
+  }
+  
+  .mobile_btn{
+    display: block;
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    /* margin-top: 15px; */
+  }
+}
+
+
+
+.section_two_wrapper{
+  /* width: 1440px;
+  height: 709px;  */
+ display: flex;
+ gap:20px;
+ padding-top: 62px;
+ margin: 0 auto;
+}
+
+.pic_section{
+  width: 505.92px;
+  height: 758.42px;
+  object-fit: cover;
+}
+
+div.ordinary{
+  width: 680px;
+  height: 504px;
+  /* background-color: red; */
+}
+.me{
+  font-family: "lato";
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 21px;
+  margin-bottom: 38px;
+}
+
+.para_1 + .para_1{
+  font-family: "lato";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 30px; 
+}
+
+/* @media(max-width:768px){
+  .pic_section{
+    width: 135px;
+    height: 203px;
+    object-fit: cover;
+  }
+
+  .para_1 {
+    font-family: "lato";
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 13.5px;
+ 
+  }
+}
+ */
+
+
+
+
+
+
+
+
+
+
+

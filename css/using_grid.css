@@ -1,0 +1,101 @@
+/*
+Just like flex, css grid has grid container and grid items. Css grid does not replace flex box, infact they work together. If you want to build a one-dimensional layout, we can use flex but if you want to build a two-dimensional layout, grid is your best bet.
+
+TERMINOLOGIES USED IN CSS-GRID
+
+1. Grid container:
+2. grid-items: These are the smaller spaces of the grid containers
+3. Row axis
+4. column axis.
+
+unlike flex box, the grid direction cannot be changed.
+
+5. grid lines: These separate the columns and rows. If we have three columns, then we have four grid lines. If we have two rows then we have three grid lines  and so forth.
+
+6. Grid cells: This is the area of intersection between the row and column. grid cell might and might not be filled by a grid-item.
+6. Gutters or Gaps. The spaces between grid-items are called gaps or gutters.
+
+7. Grid track: This could be a row or a column.
+
+
+PROPERTIES OF A GRID CONTAINER
+
+1. Grid-template-rows:
+2. Grid-template-columns: 
+
+3. Column-gap:
+4. Row-gap: 
+These two make up the gap property.
+
+5. Justify-items: stretch/ start / end / center
+6. Align-items: stretch/ start / end / center.
+
+There is also;
+
+7. justify-content and 
+8. Align-content.
+They are used if the container is bigger than the grid.
+
+
+PROPERTIES OF A GRID items
+
+1. Grid-columns: start line / end line / span(number)
+2. grid rows. start line / end line / span(number)
+These two are used to place grid-items in a specific cell.
+
+3. Justify-self: stretch / start / end / center /
+4. Align-self: stretch / start / end / center 
+
+These two are similar to align-items and justify items.
+ */
+/*
+SIZING GRID COLUMNS AND ROWS 
+
+Note that in css grid, we use the unit called fr. this helps us create flexible rows and columns unlike the flex which is rigid.
+ */
+
+.container {
+  height: 600px;
+  /* width: 1200px; */
+  /* background-color: blue; */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 20 50fr;
+  column-gap: 10fr;
+  row-gap: 40fr;
+}
+
+/* 
+To simplify things, we now have a repeat function that helps us specify the number of columns and how wide we want them to be. Example is seen below;
+
+grid-template-columns: repeat(4 1fr)
+
+The above means that we want 4 columns and 1 fraction wide.
+ */
+
+.box {
+  height: 50px;
+  width: 50px;
+}
+.box1 {
+  background-color: red;
+}
+
+.box2 {
+  background-color: blue;
+}
+
+.box3 {
+  background-color: cyan;
+}
+
+.box4 {
+  background-color: red;
+}
+.box5 {
+  background-color: aqua;
+}
+.box6 {
+  background-color: blue;
+}

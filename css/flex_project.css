@@ -1,0 +1,66 @@
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.taylor{
+    text-align: center;
+}
+.main{
+    display: flex;
+    gap: 70px;
+}
+
+.shipping{
+    display: flex;
+    gap: 30px;
+}
+
+.dollar{
+    align-self: center;
+    font-weight: bold;
+}
+
+.ship{
+    font-weight: lighter;
+}
+.boxes{
+    display: flex;
+    gap: 20px;
+}
+.box{
+    height: 40px;
+}
+.box1{
+    background-color: black;
+}
+.box2{
+    background-color: blue;
+}
+.box3{
+    background-color: tomato;
+}
+.box4{
+    background-color: yellow;
+}
+.box5{
+    background-color: lime;
+}
+.box6{
+    background-color: brown;
+}
+
+.cart{
+    width: 1200px;
+    margin: 0 auto;
+    height: 60px;
+    background-color: black;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.cart a{
+    text-decoration: none;
+    color: white;
+    padding-top: 6px;
+}

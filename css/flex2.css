@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.main{
+    height: 800px;
+    width: 1200px;
+    margin-left: 50px;
+    background-color: grey;
+    display: flex;
+}
+
+.el{
+    
+}
+
+.main2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*
+.wrapper{
+    display: flex;
+    height: 200vh;
+    background-color: wheat;
+    justify-content: center;
+    align-items: center;
+}
+.black-color{
+    background-color: black;
+}
+
+.content{
+    background-color: blue;
+}
+*/
+/*
+there are commands that work on the main axes, one of which is justify content...remember ther are two axes, main and cross.
+
+the command that controls the cross axes is called align item...these two properties are placed on the parent container
+*/
+/*
+.box2{
+    background-color: red;
+}
+.box3{
+    background-color: green;
+}
+.box4{
+    background-color: purple;
+}
+*/

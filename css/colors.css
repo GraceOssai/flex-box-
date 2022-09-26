@@ -1,0 +1,211 @@
+/*
+Using the rgb values, when the r=255, g=0, b=0, it becomes very red. this is the same for blue and green.
+
+when we have all the rgb set to 255, 255, 255, then it becomes white. but when it is set to 0, 0, 0, it becomes black.
+
+when we have 255, 0, 255, then it becomes a mix of red and blue. this is also applicable if it is switched.
+
+Note that there are two ways of writting colors;
+1. the rgb or rgba
+2. the hexa-decimal.
+
+1.the rgb (255, 117, 218)
+  rgba (255, 117, 218, 0.3): this specifies the transparency.
+
+2. the hexa-decimal. this uses a scale of 00-ff unlike the rgb that scales from 0-255.
+ff kind of represents 255 but in a hexa-decimal scale.
+In sum, the hexa-decimal number goes from 0-15 which means there are 16 hexa-decimal numbers and the last number is the "f". so #00ffff means rgb(00=r(00), ff=g(255), ff=b(255))
+
+So in application, we normally use the hexa-decimal notatin but use the rgb for transparency.
+ */
+
+/*
+ If we have a list items and we want to style only the first item on the list, what we use is a pseudo-class. e.g
+ 
+ <ul>
+  <li class="list_item">This is the first item on the list</li>
+  <li>This is the Second item on the list</li>
+  <li>This is the Third item on the list</li>
+  <li>This is the Fourth item on the list</li>
+  <li>This is the Fifth item on the list</li>
+ </ul>
+
+ li:first-child{
+  font-weight:bold 
+ }
+
+ This will authomatically bold the first item on the list.
+ So instead of manually giving it a class name and styling, we just use a pseudo-class.
+
+ This is also applicable to the last-child.
+
+ <ul>
+  <li class="list_item">This is the first item on the list</li>
+  <li>This is the Second item on the list</li>
+  <li>This is the Third item on the list</li>
+  <li>This is the Fourth item on the list</li>
+  <li>This is the Fifth item on the list</li>
+ </ul>
+
+ li:last-child{
+  font-style:itallic; 
+ }
+
+ We can also target the second child or any of the items on the list using;
+
+ li:nth-child(2){
+  color:blue;
+ }
+
+ The above is applicable to any of the items on the list. It could be the 3rd or 4th e.t.c.
+
+ or we can style only all the odd numbers by doing the below: 
+
+  <ul>
+  <li class="list_item">This is the first item on the list</li>
+  <li>This is the Second item on the list</li>
+  <li>This is the Third item on the list</li>
+  <li>This is the Fourth item on the list</li>
+  <li>This is the Fifth item on the list</li>
+ </ul>
+
+ li:nth-child(odd){
+  font-style:itallic; 
+ }
+This will authomatically style all the odd numbers on the list.
+
+This is also applicable to the even numbers.
+
+If we have the below,
+
+<article>
+ <p>This is the first paragraph of this article</p>
+
+ <h1>I am the first header of the article.</h1>
+</article>
+
+we can style thus using pseudo-class:
+
+article p:first-child{
+  color:red;
+}
+
+This way, you have told the browser to give color red to the first child p of the article.
+
+We can do this for both the last child of the article, and also the nth-child.
+
+All the above will only work if they are actually the first or second or last child of that container (article.)
+
+If we have a list item of four, we can target the last item usig;
+
+article:li:last-child{
+
+}
+
+If it is a link,
+
+article:a:last-child{
+
+}
+
+This is also applicable to the nth child of that container.
+  */
+
+/*
+  STYLING LINKS
+  
+  If we have <a href="#">I am a link</a>,
+Although we can do the below in styling;
+
+a {
+  color:blue;
+}
+
+This will work but it isn't a very good practice.
+rather, we use the pseudo-class.
+
+a:link{
+  color:red;
+}
+  This will authomatically basically target all the anchor elements that have an href attribute.
+
+
+If we want to sylt the link when it is visited or and more, we use;
+
+a:visited{
+  color:blue;
+}
+
+This is also applicable for hover and active.
+
+The below is the order of styling a link
+
+LVHA
+
+L-link
+V-visited
+H-hover
+A-active.
+
+*/
+
+/*
+PADDING AND MARGIN
+
+Padding creates space within the elements but margin cretaes space outside of the element.
+
+Note that each element is seen as a box. So, within the box, padding is applied while margin is applied outside the box. so if we want to create space between two elements, we use margin. as this is the space outside the element (box). So if we apply a backgroung color to an element, you will then be more visible.
+ */
+
+/*
+ SETTING OUR WORK AT THE MIDDLE OF THE PAGE
+ 
+ first, we give the container a certain width say 700px or more, then we assign margin left and right to it. example can be seen below.
+
+ .container{
+  width:1200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  This will authomatically set the container at the middle of the page. But there is a better way to do this using the shorthand form.
+
+  .container{
+  width:1200px;
+  margin: 0 auto;
+
+  What the above means is that the margin top and bottom is 0 while the margin left and right is automatic(centered.)
+
+ }
+
+
+ If we have the below;
+
+ <h1>This is one way to use pseudo-elements</h1>
+  and we want the first letter (T) to be bigger of have any style, use the below;
+
+  h1::first-letter{
+    font-size:60px;
+  }
+
+  We can also go ahead and style the first line of all the paragraphs of a document.
+
+  p::first-line{
+    color:blue;
+  }
+  */
+
+/*
+  INLINE AND BLOCK BOXES OR ELEMENTS
+
+  Note that height and width properties cannot be applied to an inline element. Also paddings and margins top and bottom does not have any effect on an inline element. properties that can be applied here are from left to right (horizontally) rather than top to bottom as the latter will not work.
+
+  The above is one major difference between inline and block elements as the height and width properties can be applied to the block elements, the top and bottom properties are also applied.
+
+  INLINE BLOCK
+
+  The height and width property is applied to this type of display. So if we give it a height or margin-top of 10px, it will be applied.
+
+  On the outside, they behave like inline elements while on the inside, they behave like block. This is to say that, if a list item is set to an inline display, looking at it, it will lay side by side each other (behaving like inlie) but when you set it to a margin-top of 10px, it will also apply(behaving like block).
+  
+  Note that images are inline elements but behave like inline-block as the height and width properties can be assigned to them. So we can add the shorthand form of margin and the both the margin-top, bottom, left and right will be applied. This is one way to move your image to either the center of your page or anywhere.
+   */

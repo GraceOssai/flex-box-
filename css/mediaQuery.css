@@ -1,0 +1,57 @@
+/* Note that 1 rem = the default browser font size.
+ideally, 1rem=16px
+1rem = 1em = 16px
+rem is the ROOT font size while em is the CURRENT font size.
+em is most preferably used in media querries.
+*/
+
+/* If we want our break point at 13, then will divide 1t by 16px. hence we have 84.37...
+
+ */
+
+ /* To avoid a squid or stretched image, simply put the image in a wrapper and style the wrapper itself. Then come down to the image and style it too and add object-fit of contain or cover and the image will look exactly as the original but only smaller or bigger. e.g*/
+
+ /* .wrapper{
+    width: 100%;
+    height: 100%;
+ }
+
+ .img{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+ } */
+
+ /* the above is just on the side. */
+
+ /*
+ .wrapper {
+   height:400px
+ width:200px
+ background-color:blue
+ }
+
+ @media(max-width:786px){
+   background-color:red
+   font-size:75px;
+ } 
+ 
+ What the above means is that the maximum value the screen should get to in order for the media query to be applied is 786px. So anything from 0px or -infinity to 786px, the media query should apply.
+
+ .wrapper {
+   height:400px
+ width:200px
+ background-color:blue
+ }
+
+ @media(min-width:786px){
+   background-color:red
+   font-size:75px;
+ } 
+
+What the above means is that the media query should apply from 786px, meaning the minimum vlaue the width or screen width should get to before the media querycan be applied is 786px. Anything less than 786px, the media query should not be applied.
+
+In sum, when we are doing mobile first, we use max but when we are doing desktop first, we use min.
+
+The limits of values are called breakpoints. That's the number it gets to for the media query to be applied or not to be applied.
+  */

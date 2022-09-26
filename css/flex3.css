@@ -1,0 +1,151 @@
+*{
+    padding: 0;
+    width: 0;
+}
+
+.container{
+    background-color: aqua;
+    font-size: 30px;
+    font-family: sans-serif;
+    height: 400px;
+    width: 1500px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    /*
+    if we are moving things along the main axis, we use justify-content.
+    NOTE that main axis could be either the row or column.
+    below are the list of all properties we can use with justify-content.
+    justify-content:space-around. This will space each of the flex-items all around.
+    justify-content:space-between. This will just put space between them.
+    justify-content:space-evenly: This will space them evenly.
+    justify-content:center: This will move the whole flex-items to the middle horizontally.
+    justify-content:flex-start: This will move the flex-items to the start of the container horizontally
+    justify-content:flex-end: This will move the flex-items to the end of the box horizontally.
+
+    NOTE that Justify content can only be used on the container.
+    */
+    
+}
+
+/*
+For the flex-container or box itself, below are the properties we use.
+1. Gap: This creates space between the flex-items without using margin.It has the following values
+a) length.
+NOTE that gap 0 is the default value.
+So we can set gap to 30px or any value we want. This functions almost the same way space-between does.
+
+2. Justify-content: This has the following values;
+a) flex-start
+b) flex-end
+c) center
+d) space-around
+e) space-between
+f) space-evenly
+
+3. align-items: This aligns the items vertically i.e in the cross axes
+a) flex-start
+b) flex-end
+c) center
+d) base-line
+
+4. Flex-direction: This defines which is the main axis and it has the following values;
+a) row
+b) row-reverse
+c) column
+d) column-reverse
+
+5. Flex-wrap: This allows items to wrap into a new line if they are too large. This has the following values;
+a) wrap
+b) wrap-reverse
+
+6. Align-content: This only applies when there are multiple lines (flex-wrap:wrap)
+The values are:
+1. stretch
+2. flex-start
+3. flex-end
+4. center
+5. space-between
+6. space-around
+*/
+
+/*
+Properties that we can use on the flex-items themselves and their values.
+1. Align-self:
+a) auto
+b) stretch
+c) flex-start
+d) flex-end
+e) baseline
+
+2. Flex-grow:0 (integer)
+
+3. Flex-shrink:1 (integer)
+
+4. Flex-basis:auto (This defines an item's width instead of the width property) <length>
+
+5. Flex: 0 1 auto (integer integer length). This is the recommended shorthand for flex-grow, flex-shrink and flex-basis.
+
+6. order:0.This controls order of items. -1 makes item first and 1 makes item last.
+The default value for order is 0 so if you want to move an element to the very first position, you'll set it to a number less than 0. If you want to move an element to the last position, set it to 1. If you want to set another number to the last position, you will set it to a larger number, 2. This will over-ride the first 1 and position the new element to the last position.
+*/
+
+.box{
+    height: 200px;
+    /*flex-basis: 250px;*/
+    flex: 0 0 250px;
+    /*The above covers grow, shrink and basis.*/
+}
+
+/*
+application of flex (flex-grow, shrink and basis)
+By default, 
+flex-grow:0
+flex-skrink:1
+flex-basis:auto
+
+Instead of using width in flexbox, we use the flex-basis.
+*/
+
+/*
+If we specify a value for flex-basis and the whole items gets bigger than the container, then by default, the browser shrinks them to fit into the container properly using shrink-1. So although we set our basis to be 250px, if we inspect, you will find out that it is 187.5px in the browser. the browser has automatically shrinked it in order to fit into our container which is 1500px.
+
+It is bad practice to use grow, shrink or basis rather we use the flex itself. e.g flex: 0 0 200px;
+*/
+
+.box1{
+    background-color: red;
+    order: 1;
+    /*
+    This will take the first box to the last position.
+    */
+}
+
+.box2{
+    background-color: blue;
+    order: 2;
+    /*
+    This will over-ride the box1 and be at the last position.
+    */
+}
+.box3{
+    background-color: blueviolet;
+}
+.box4{
+    background-color: burlywood;
+}
+.box5{
+    background-color: red;
+}
+
+.box6{
+    background-color: blue;
+}
+.box7{
+    background-color: blueviolet;
+}
+.box8{
+    background-color: burlywood;
+}
+

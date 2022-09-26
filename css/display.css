@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.box-1{
+    background-color: blue;
+}
+/* Note that there are some display properties that affects both the parent and children but there are some that
+affects only the parent and not the children. 
+example of those that do not affect the children is called the OUTSIDE DISPLAY and those that fall in this category is the block, in-ilne and none.
+Those that affects both the parent and chldren are call the the INSIDE DISPLAY and example of those are the flex.
+https://developer.mozilla.org/en-US/docs/Web/CSS/display
+*/
+.wrapper{
+    display: block;
+    height: 600px;
+    width: 400px;
+    padding: 50px;
+
+}
+
+/* BLOCK PROPERTIES*/
+/*
+1. It takes the 100% or full width
+2. They can have heights and width
+3. It starts on a new line.
+*/
+
+/* INLINE PROPERTIES*/
+/*
+1. It does not take the full width
+2. It also repects padding and margin left and right but does not respect top and bottom padding and margin
+3. height and width properties does not work here
+*/
+
+/* INLINE PROPERTIES*/
+/*
+1. does not start in a new line
+2. can have padding top and bottom
+it gives it some characteristics of inline and block.
+This goes to say we can add padding all round and margin all round.
+*/

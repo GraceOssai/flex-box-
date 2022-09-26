@@ -1,0 +1,9 @@
+/*
+Animation means changing a value over time. It could be height or any value.
+
+We use transitioning for animations. Please note that TRANSITION WILL NOT WORK WITHOUT THE TRANSITION DURATION
+
+ */
+
+.animation {
+}

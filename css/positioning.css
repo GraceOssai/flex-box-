@@ -1,0 +1,47 @@
+div.relative {
+  position: relative;
+  left: 30px;
+  border: 3px solid #73ad21;
+}
+
+/*
+  There are different values of positioning:
+  1. Static
+  2. Relative
+  3. Fixed
+  4. Absolute and
+  5. Sticky
+
+  Elements are then positioned using the Left, Right, Bottom and Top. However, these properties will not work if the position property is not set first.
+
+  1. The static positioning is the default positioning. all html elements are positioned static by default. This property is not affected by the Left, Right, Top and Bottom.
+
+  2. 
+
+  3. The fixed position value is positioned relative to the view port which means it stays in the same place even if the page is scrolled up. It doesn't leave leave a gap in the page where it was normally located. 
+
+  4. Absolute positioned element is positioned relatived to the nearest POSITIONED. If an Absolute positioned element does not have an ancestor, it follows the document's body and moves along when it is scrolled. It goes out from the normal flow hence can over-lap other elements. Absolute helps us to position elements anywhere on the screen.
+  Note that when it is positioned absolute, it is removed from its normal flow, it might overlap other elements. It is also positioned based on the view port.
+
+  The view port is the visible part of the screen.
+
+  */
+
+button {
+  /* position: fixed;
+  bottom: 0;
+  right: 0; */
+
+  padding: 20px;
+  cursor: pointer;
+  background-color: blue;
+  color: white;
+  font-size: 22px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/*
+The button above is positioned at the bottom right corner of the view port. For us to move it down the page, the position absolute has to be set relative to a parent container. If there is no major container holding it (button), we will now set body to be relative but if there is a major container holding it, then we can set the container to be relative..  
+ */
